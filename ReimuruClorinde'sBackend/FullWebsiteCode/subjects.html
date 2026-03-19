@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudySnap AI - Subjects</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body data-theme="light">
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <h1 class="logo">StudySnap AI</h1>
+      <nav class="nav-groups">
+        <div class="nav-group">
+          <p class="nav-title">Core</p>
+          <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="subjects.html">Subjects</a></li>
+            <li><a href="settings.html">Settings</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-group">
+          <p class="nav-title">Subjects</p>
+          <div id="subjectNav" class="subject-nav"></div>
+          <p id="subjectNavEmpty" class="nav-empty">Upload a file to auto-create subjects.</p>
+        </div>
+      </nav>
+    </div>
+    <div class="user-profile">
+      <img src="https://via.placeholder.com/40" alt="Avatar">
+      <span>John Doe</span>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="top-nav">
+      <input type="text" placeholder="Search your study space...">
+      <button id="uploadBtn" class="upload-btn" type="button">Upload</button>
+      <input id="fileInput" class="file-input" type="file" multiple>
+      <div class="icons">
+        <span class="notification">Notifications</span>
+        <button id="theme-toggle" aria-label="Toggle theme">Dark mode</button>
+        <img class="avatar" src="https://via.placeholder.com/32" alt="Avatar">
+      </div>
+    </header>
+
+    <section class="section-block">
+      <div class="upload-area card">
+        <h2>Upload materials to generate subjects</h2>
+        <p>PDF, PPTX, or text files are supported.</p>
+        <button id="uploadAreaBtn" class="upload-btn" type="button">Upload Files</button>
+        <ul id="uploadList" class="upload-list"></ul>
+      </div>
+    </section>
+
+    <section id="subjects" class="section-block">
+      <div class="subject-intro">
+        <h2>Subjects</h2>
+        <p class="section-subtitle">Subjects, flashcards, and quizzes are generated automatically after each upload.</p>
+      </div>
+      <div id="subjectsContainer" class="subjects-container"></div>
+    </section>
+  </main>
+</body>
+</html>
